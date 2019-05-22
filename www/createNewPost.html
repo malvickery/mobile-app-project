@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    <title>Create New Post</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: lighter;
+            color: #000;
+            width: 100%;
+            background-color: #fff;
+            margin: 0;
+        }
+
+        h3, h4 {
+            text-align: center;
+        }
+
+        h4 {
+            margin-bottom: -10px;
+        }
+
+        .text {
+            border: 0.75px solid #000;
+            width: 90%;
+            height: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            margin-left: 2.5%;
+        }
+
+        .summary {
+            border: 0.75px solid #000;
+            width: 90%;
+            height: 200px;
+            margin-left: 2.5%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+        }
+
+        .button {
+            background-color: #ffffff;
+            border: .75px solid #000000;
+            margin-top: 1%;
+            color: #000000;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding-left: 10px;
+            height: 50px;
+            font-size: 40px;
+            vertical-align: middle;
+        }
+
+        .previous {
+            background-color: #000;
+            color: #fff;
+        }
+
+        #menu {
+            background-Color: #000000;
+            width: 100%;
+            height: 55px;
+        }
+
+    </style>
+</head>
+
+<body>
+        <div id="menu">
+            <a href="main.html" class="previous">&#8249;</a>
+        </div>
+        <div>
+        <img src="img/roadtrip2.jpeg" height="267" width="100%"/>
+    </div>
+    <div>
+        <h3>Capture your Memory</h3>
+        <button onclick="cameraTakePicture();" class="button">Take A Picture</button>
+        <br>
+        <button onclick="cameraGetPicture();" class="button">Camera Roll</button>
+        <img id="myImage" style="display:block; padding:0px 15px 15px 15px; box-sizing:border-box; width:100%; margin:0 auto">
+        <h3>Location</h3>
+        <h4>Place</h4>
+        <br>
+        <input type="text" class="text" id="place">
+        <br>
+        <h4>GPS Position</h4>
+        <br>
+        <input type="text" class="text" id="location">
+        <br>
+        <button onclick="getPosition()" class="button">Get GPS Position</button>
+        <br>
+        <h3>Summary of Trip</h3>
+        <input type="text" class="summary" id="summary">
+        <br>
+        <button onclick="writeUserData()" class="button">Post Your Memory</button>
+    </div>
+
+        <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyD6uonrdf1rL8nC3aiRfUa14zUqYra2es8",
+                authDomain: "roadtrip-1d5b1.firebaseapp.com",
+                databaseURL: "https://roadtrip-1d5b1.firebaseio.com",
+                projectId: "roadtrip-1d5b1",
+                storageBucket: "roadtrip-1d5b1.appspot.com",
+                messagingSenderId: "461431680534"
+            };
+            firebase.initializeApp(config);
+        </script>
+    <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

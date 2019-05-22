@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>Road Trip</title>
+    <style>
+        body {
+            position:fixed;
+            background: url("img/background.png") 0 0 no-repeat fixed;
+            background-size: cover;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: lighter;
+            color: #fff;
+            width: 100%;
+        }
+
+        h2, h3 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            margin-bottom: 0px;
+            font-weight: lighter;
+            width: 100%:
+        }
+
+
+        #newEmail, #newPassword {
+            border: 0.75px solid #fff;
+            width: 90%;
+            height: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button {
+            background-color: transparent;
+            border: .75px solid #ffffff;
+            margin-top: 1%;
+            color: #ffffff;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        #userLogin {
+            width: 100%;
+            margin-top: 90%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="login" id="userLogin">
+    <h2>Login</h2>
+    <h3>Email</h3>
+    <input type="email" id="newEmail">
+    <h3>Password</h3>
+    <input type="password" id="newPassword">
+    <button onclick="newUser()" class="button">Create New Account</button>
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD6uonrdf1rL8nC3aiRfUa14zUqYra2es8",
+        authDomain: "roadtrip-1d5b1.firebaseapp.com",
+        databaseURL: "https://roadtrip-1d5b1.firebaseio.com",
+        projectId: "roadtrip-1d5b1",
+        storageBucket: "roadtrip-1d5b1.appspot.com",
+        messagingSenderId: "461431680534"
+    };
+    firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>
